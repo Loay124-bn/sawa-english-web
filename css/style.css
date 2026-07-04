@@ -231,7 +231,7 @@ section { position: relative; }
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 20px;
 }
 
 .nav-links a:not(.btn) {
@@ -246,7 +246,7 @@ section { position: relative; }
 .nav-links a:not(.btn):hover { background: var(--color-blue-50); color: var(--color-primary-dark); }
 .nav-links a.active-link { color: var(--color-primary-dark); background: var(--color-blue-50); }
 
-.nav-cta { display: flex; align-items: center; gap: 8px; }
+.nav-cta { display: flex; align-items: center; gap: 8px; margin-left: 12px; }
 
 .nav-toggle {
   display: none;
