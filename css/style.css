@@ -62,8 +62,16 @@ html { scroll-behavior: smooth; }
   }
 }
 
+html {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 body {
   margin: 0;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
   font-family: var(--font-body);
   color: var(--color-ink);
   background: var(--color-bg);
@@ -151,6 +159,7 @@ section { position: relative; }
   border: 1px solid transparent;
   transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast), border-color var(--transition-fast);
   white-space: nowrap;
+  max-width: 100%;
 }
 
 .btn svg { flex-shrink: 0; }
@@ -450,6 +459,7 @@ section { position: relative; }
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: 32px 26px;
+  text-align: center;
   transition: transform var(--transition-med), box-shadow var(--transition-med), border-color var(--transition-med);
   position: relative;
   overflow: hidden;
@@ -664,19 +674,27 @@ section { position: relative; }
   box-shadow: var(--shadow-md);
 }
 
+.feature-card .feature-icon {
+  margin: 0 auto 22px;
+}
+
 .contact-card .feature-icon { margin: 0 auto 20px; }
 
 .contact-email {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
-  margin-top: 18px;
+  margin: 18px auto 0;
   padding: 14px 24px;
+  max-width: 100%;
   border-radius: var(--radius-full);
   background: var(--color-blue-50);
   color: var(--color-primary-dark);
   font-weight: 600;
   font-family: var(--font-display);
+  word-break: break-word;
+  text-align: center;
   transition: background var(--transition-fast), transform var(--transition-fast);
 }
 .contact-email:hover { background: var(--color-blue-100); transform: translateY(-2px); }
@@ -888,7 +906,8 @@ section { position: relative; }
 
   .hero { padding-top: calc(var(--nav-height) + 60px); }
   .hero-actions { flex-direction: column; align-items: stretch; }
-  .hero-actions .btn { width: 100%; }
+  .hero-actions .btn { width: 100%; white-space: normal; text-align: center; }
+  .cta-actions .btn { white-space: normal; text-align: center; }
 
   .feature-grid { grid-template-columns: 1fr; }
   .screens-track { grid-template-columns: 1fr; max-width: 320px; margin: 0 auto; }
@@ -896,4 +915,7 @@ section { position: relative; }
   .legal-card { padding: 34px 22px; }
   .footer-cols { gap: 32px; }
   .strip-inner { justify-content: center; gap: 26px; }
+
+  .contact-card { padding: 32px 22px; }
+  .contact-email { padding: 12px 18px; font-size: 0.9rem; }
 }
