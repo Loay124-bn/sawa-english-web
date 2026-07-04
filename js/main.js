@@ -78,7 +78,7 @@
      Replace "#" below (or the href in HTML) with your real
      Google Play Store URL once the app is published. */
   var playStoreLinks = document.querySelectorAll("#playStoreBtn, #playStoreBtnCta");
-  var PLAY_STORE_URL = "#"; // TODO: replace with real Play Store link
+  var PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.sawaenglish.app&hl=en"; // TODO: replace with real Play Store link
 
   playStoreLinks.forEach(function (link) {
     link.setAttribute("href", PLAY_STORE_URL);
